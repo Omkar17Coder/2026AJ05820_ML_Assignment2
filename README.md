@@ -223,17 +223,3 @@ python -m shopper_intent.train          # retrain + tune all 5 models (~6 min); 
 python -m pytest -q                     # 20 checks, incl. "saved models reproduce metrics.json"
 streamlit run app.py                    # http://localhost:8501
 ```
-
-The notebook (`notebooks/2026AJ05820_ML_Assignment2.ipynb`) walks through the EDA and calls the same
-training code.
-
-## Deploying on Streamlit Community Cloud
-
-1. Push this folder to a public GitHub repo.
-2. <https://streamlit.io/cloud> → *New app* → pick the repo, branch `main`, main file `app.py`.
-3. Under *Advanced settings*, choose **Python 3.12 or newer**, then deploy.
-   `requirements.txt` pins `scikit-learn==1.9.1`, the version the `.joblib` files were saved with.
-
-> The pinned numpy / scipy need **Python ≥ 3.12**. If a machine only has an older Python (e.g. the BITS lab image),
-> install unpinned versions (`pip install streamlit scikit-learn pandas numpy plotly matplotlib seaborn pytest`) and
-> run `python -m shopper_intent.train` first, so the `.joblib` files are rebuilt for that scikit-learn version.
