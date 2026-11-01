@@ -1,0 +1,92 @@
+{
+  "trained_at": "2026-11-01T03:06:24+00:00",
+  "mode": "grid_search",
+  "cv_folds": 5,
+  "random_state": 42,
+  "n_train": 9764,
+  "n_test": 2441,
+  "python": "3.14.4",
+  "sklearn": "1.9.1",
+  "models": {
+    "logistic_regression": {
+      "name": "Logistic Regression",
+      "scaler": "log_robust",
+      "best_params": {
+        "C": 0.003,
+        "class_weight": "balanced"
+      },
+      "cv_mcc": 0.6070921438160121,
+      "cv_mcc_by_scaler": {
+        "log_standard": 0.602094762226588,
+        "log_robust": 0.6070921438160121,
+        "log_minmax": 0.5932094437237556,
+        "yeo_johnson": 0.5990872334084184
+      },
+      "fit_seconds": 19.77
+    },
+    "decision_tree": {
+      "name": "Decision Tree",
+      "scaler": "log_standard",
+      "best_params": {
+        "class_weight": null,
+        "criterion": "entropy",
+        "max_depth": 8,
+        "min_samples_leaf": 20
+      },
+      "cv_mcc": 0.5865312546969229,
+      "cv_mcc_by_scaler": {
+        "log_standard": 0.5865312546969229
+      },
+      "fit_seconds": 8.05
+    },
+    "knn": {
+      "name": "KNN",
+      "scaler": "yeo_johnson",
+      "best_params": {
+        "n_neighbors": 21,
+        "p": 2,
+        "weights": "distance"
+      },
+      "cv_mcc": 0.5890732250962769,
+      "cv_mcc_by_scaler": {
+        "log_standard": 0.5672962368050838,
+        "log_robust": 0.5845891589046207,
+        "log_minmax": 0.46575956305024013,
+        "yeo_johnson": 0.5890732250962769
+      },
+      "fit_seconds": 43.48
+    },
+    "naive_bayes": {
+      "name": "Naive Bayes",
+      "scaler": "log_robust",
+      "best_params": {
+        "var_smoothing": 0.1
+      },
+      "cv_mcc": 0.5236984736535772,
+      "cv_mcc_by_scaler": {
+        "log_standard": 0.5230226297082943,
+        "log_robust": 0.5236984736535772,
+        "log_minmax": 0.5058973404260089,
+        "yeo_johnson": 0.5211107371948275
+      },
+      "fit_seconds": 11.7
+    },
+    "svm": {
+      "name": "Support Vector Machine",
+      "scaler": "yeo_johnson",
+      "best_params": {
+        "C": 1.0,
+        "class_weight": null,
+        "gamma": "scale"
+      },
+      "cv_mcc": 0.6139452428910724,
+      "cv_mcc_by_scaler": {
+        "log_standard": 0.6055484028149712,
+        "log_robust": 0.5998813684093751,
+        "log_minmax": 0.6111298217731181,
+        "yeo_johnson": 0.6139452428910724
+      },
+      "fit_seconds": 214.83
+    }
+  }
+}
