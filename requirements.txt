@@ -1,0 +1,15 @@
+# app + models (scikit-learn is pinned to the version the .joblib files were trained with)
+streamlit==1.66.1
+scikit-learn==1.9.1
+numpy==2.5.4
+pandas==3.1.0
+scipy==1.18.1
+joblib==1.6.0
+plotly==7.1.0
+
+# notebook / EDA
+matplotlib==3.11.2
+seaborn==0.13.2
+
+# tests
+pytest==9.1.1
