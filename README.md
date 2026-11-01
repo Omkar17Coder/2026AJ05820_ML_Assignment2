@@ -4,8 +4,8 @@
 
 | | |
 |---|---|
-| **GitHub repository** | `<add your GitHub repo link here>` |
-| **Live Streamlit app** | `<add your Streamlit Community Cloud link here>` |
+| **GitHub repository** | https://github.com/Omkar17Coder/2026AJ05820_ML_Assignment2 |
+| **Live Streamlit app** | https://2026aj05820mlassignment2-dusd4vsqiegikz7rwdvou9.streamlit.app/ |
 
 ---
 
@@ -60,7 +60,7 @@ an interactive Streamlit app that evaluates the saved models on an uploaded test
 
 ## c. GitHub repository
 
-Repository link: `<add your GitHub repo link here>`
+Repository link: https://github.com/Omkar17Coder/2026AJ05820_ML_Assignment2
 
 ```
 2026AJ05820_ML_Assignment2/
@@ -219,7 +219,7 @@ metrics need the target column. Files with missing feature columns get a clear e
 python -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
 
-python -m shopper_intent.train          # retrain + tune all 5 models (~6 min); --quick for defaults
-python -m pytest -q                     # 20 checks, incl. "saved models reproduce metrics.json"
-streamlit run app.py                    # http://localhost:8501
+python -m shopper_intent.train          
+python -m pytest -q                     
+streamlit run app.py                  
 ```
